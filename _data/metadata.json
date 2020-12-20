@@ -1,20 +1,20 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Çekmeköy Lalebahçesi Anaokulu",
+  "url": "https://cekmekoylalebahcesi.com/",
+  "description": "Çekmeköy Lalebahçesi Anaokulu.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Çekmeköy Lalebahçesi Anaokulu.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://example.com/"
+    "id": "https://cekmekoylalebahcesi.com/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://cekmekoylalebahcesi.com/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "Kıta Yazılım",
+    "email": "info@kitayazilim.com",
+    "url": "https://kitayazilim.com/"
   }
 }
