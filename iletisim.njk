@@ -1,0 +1,111 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: İletişim
+  order: 5
+
+baslik: İletişim
+iletisimdekal: İletişimde Kalın
+iletisimdekalalt: Yazacak birşeyler mutlaka vardır.
+iletisimdekaltext: buraya metin yazısı gelecek iletişimde kalın iletişim çağında bunu yapmak gerekir.
+bizeulasin: Bize Ulaşın
+form:
+    ad: Adınız
+    mail: Mail Adresiniz
+    konu: Konu
+    mesaj: Mesajınız
+    buton: Gönder
+---
+
+<div id="page-wrapper">
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <!-- jumbo-heading -->
+            <div class="jumbo-heading" data-aos="fade-down">
+                <h1>{{baslik}}</h1>
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">{{baslik}}</li>
+                    </ol>
+                </nav>
+                <!-- /breadcrumb -->
+            </div>
+            <!-- /jumbo-heading -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /jumbotron -->
+</div>
+<!-- ==== Page Content ==== -->
+<div class="page pb-0">
+    <div class="container block-padding">
+        <div class="row">
+            <div class="col-lg-5 justify-content-center align-self-center text-lg-left text-sm-center text-xs-center">
+                <h2>{{iletisimdekal}}</h2>
+                <span class="h7 mt-0">{{iletisimdekalalt}}</span>
+                <p class="mt-2">{{iletisimdekaltext}}</p>
+                <!-- contact icons-->
+                <ul class="list-unstyled mt-3 list-contact colored-icons">
+                    <li>
+                        <i class="fa fa-envelope margin-icon"></i>
+                        <a href="mailto:{{sitedata.email}}">{{sitedata.email}}</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone margin-icon"></i>{{sitedata.tel}}</li>
+                    <li>
+                        <i class="fa fa-map-marker margin-icon"></i>{{sitedata.adres}}</li>
+                </ul>
+                <!-- /list-->
+            </div>
+            <!-- /col-lg- -->
+            <!-- contact-info-->
+            <div class="contact-info col-lg-6 offset-lg-1 res-margin notepad">
+                <h4>{{bizeulasin}}</h4>
+                <!-- Form Starts -->
+                <div id="contact_form">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>{{form.ad}}
+                                    <span class="required">*</span></label>
+                                <input type="text" name="name" class="form-control input-field" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <label>{{form.mail}}
+                                    <span class="required">*</span></label>
+                                <input type="email" name="email" class="form-control input-field" required="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label>{{form.konu}}</label>
+                                <input type="text" name="subject" class="form-control input-field">
+                            </div>
+                            <div class="col-md-12">
+                                <label>{{form.mesaj}}
+                                    <span class="required">*</span></label>
+                                <textarea name="message" id="message" class="textarea-field form-control" rows="3" required=""></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit_btn" value="Submit" class="btn btn-primary">{{form.buton}}</button>
+                    </div>
+                    <!-- /form-group-->
+                    <!-- Contact results -->
+                    <div id="contact_results"></div>
+                </div>
+                <!-- /contact)form-->
+            </div>
+            <!-- /contact-info-->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+    <!-- map-->
+    <div id="map-canvas" class="container-fluid"></div>
+    <!-- /map-->
+</div>

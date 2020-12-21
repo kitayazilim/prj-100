@@ -1,0 +1,40 @@
+{
+    "sitename": "Çekmeköy Lalebahçesi Anaokulu",
+    "email": "mail@mail.com",
+    "tel": "012326465656",
+    "adres": "kurum adresi buraya gelecek",
+    "copyright": "Tüm hakları saklıdır. 2020 &copy <a href='https://kitayazilim.com'>Kıta Yazılım</a> | <a href='https://alelma.com.tr'>Alelma</a>",
+    "bizeulasin": "Bize Ulaşın",
+    "calismasaatleri": "Çalışma Saatleri",
+    "saatler": [
+        {
+            "durum": "Pazartesi – Cuma : 8.30 – 18.00"
+        },
+        {
+            "durum": "Cumartesi : Kapalı"
+        },
+        {
+            "durum": "Pazar : Kapalı"
+        },
+        {
+            "durum": "Tatil Günleri : Kapalı"
+        }
+    ],
+    "socials": [
+        {
+            "name": "Instagram",
+            "url": "https://www.instagram.com/adres/",
+            "icon": "fa-instagram"
+        },
+        {
+            "name": "Facebook",
+            "url": "https://www.facebook.com/adresiniz",
+            "icon": "fa-facebook-f"
+        },
+        {
+            "name": "Twitter",
+            "url": "https://www.twitter.com/channel/adresiniz",
+            "icon": "fa-twitter"
+        }
+    ]
+}
