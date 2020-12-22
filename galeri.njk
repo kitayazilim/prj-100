@@ -1,0 +1,182 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Galeri
+  order: 3
+baslik: Galeri
+galerimiz: Fotoğraf Galerimiz
+galerimizyazi: Kurumumuz hakkında fikir sahibi olabileceğiniz galerimizi incelemeden geçmeyin.
+
+galeri:
+    -
+        ongorsel: /img/tesisler/thumbs/IMG_5877.JPG
+        gorsel: /img/tesisler/IMG_5877.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/IMG_5880.JPG
+        gorsel: /img/tesisler/IMG_5880.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/EYL_0340.JPG
+        gorsel: /img/tesisler/EYL_0340.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/EYL_0342.JPG
+        gorsel: /img/tesisler/EYL_0342.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/EYL_0329.JPG
+        gorsel: /img/tesisler/EYL_0329.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/EYL_0332.JPG
+        gorsel: /img/tesisler/EYL_0332.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/EYL_0335.JPG
+        gorsel: /img/tesisler/EYL_0335.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/koridor2.JPG
+        gorsel: /img/tesisler/koridor2.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/lavabo2.JPG
+        gorsel: /img/tesisler/lavabo2.JPG
+        alan: bina
+    -
+        ongorsel: /img/tesisler/thumbs/ahsap_ayolyesi3.JPG
+        gorsel: /img/tesisler/ahsap_ayolyesi3.JPG
+        alan: atolye
+    -
+        ongorsel: /img/tesisler/thumbs/ahsap_ayolyesi6.JPG
+        gorsel: /img/tesisler/ahsap_ayolyesi6.JPG
+        alan: atolye
+    -
+        ongorsel: /img/tesisler/thumbs/ahsap_ayolyesi8.JPG
+        gorsel: /img/tesisler/ahsap_ayolyesi8.JPG
+        alan: atolye
+    -
+        ongorsel: /img/tesisler/thumbs/ahsap_ayolyesi11.JPG
+        gorsel: /img/tesisler/ahsap_ayolyesi11.JPG
+        alan: atolye
+    -
+        ongorsel: /img/tesisler/thumbs/sınıf.JPG
+        gorsel: /img/tesisler/sınıf.JPG
+        alan: sınıf
+    -
+        ongorsel: /img/tesisler/thumbs/sınıf1.JPG
+        gorsel: /img/tesisler/sınıf1.JPG
+        alan: sınıf
+    -
+        ongorsel: /img/tesisler/thumbs/sınıf2.JPG
+        gorsel: /img/tesisler/sınıf2.JPG
+        alan: sınıf
+    -
+        ongorsel: /img/tesisler/thumbs/sınıf5.JPG
+        gorsel: /img/tesisler/sınıf5.JPG
+        alan: sınıf
+    -
+        ongorsel: /img/tesisler/thumbs/oyunsalonu2.JPG
+        gorsel: /img/tesisler/oyunsalonu2.JPG
+        alan: oyun
+    -
+        ongorsel: /img/tesisler/thumbs/oyunsalonu3.JPG
+        gorsel: /img/tesisler/oyunsalonu3.JPG
+        alan: oyun
+    -
+        ongorsel: /img/tesisler/thumbs/oyunsalonu6.JPG
+        gorsel: /img/tesisler/oyunsalonu6.JPG
+        alan: oyun
+    -
+        ongorsel: /img/tesisler/thumbs/yemekhane.JPG
+        gorsel: /img/tesisler/yemekhane.JPG
+        alan: yemek
+    -
+        ongorsel: /img/tesisler/thumbs/yemekhane4.JPG
+        gorsel: /img/tesisler/yemekhane4.JPG
+        alan: yemek
+    -
+        ongorsel: /img/tesisler/thumbs/yemekhane5.JPG
+        gorsel: /img/tesisler/yemekhane5.JPG
+        alan: yemek
+---
+
+<div id="page-wrapper">
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="jumbo-heading" data-aos="fade-down">
+                <h1>{{baslik}}</h1>
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">{{baslik}}
+                        </li>
+                    </ol>
+                </nav>
+                <!-- /breadcrumb -->
+            </div>
+            <!-- /jumbo-heading -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /jumbotron -->
+    <!-- ==== Page Content ==== -->
+    <div class="page container">
+        <div class="row">
+            <div class="col-lg-6 text-center offset-lg-3 mb-5">
+                <h2>{{galerimiz}}</h2>
+                <p>
+                    {{galerimizyazi}}
+                </p>
+            </div>
+            <!-- /col-lg -->
+        </div>
+        <!-- /row -->
+        <!-- centered Gallery navigation -->
+        <ul class="nav nav-pills category-isotope center-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#" data-toggle="tab" data-filter="*">Hepsi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter=".bina">Bina</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter=".sınıf">Sınıflar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter=".atolye">Atolyeler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter=".oyun">Oyun Alanı</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="tab" data-filter=".yemek">Yemekhane</a>
+            </li>
+        </ul>
+        <!-- /ul -->
+        <!-- Gallery -->
+        <div id="gallery-isotope" class="row mt-5 magnific-popup">
+            <!-- Image 1 -->
+            {%- for pic in galeri -%}
+                <div class="col-sm-6 col-md-6 col-lg-3 {{pic.alan}}">
+                    <div class="portfolio-item">
+                        <div class="gallery-thumb">
+                            <img class="img-fluid " src="{{pic.ongorsel | url}}" alt="{{pic.alan}}">
+                            <span class="overlay-mask"></span>
+                            <a href="{{pic.gorsel | url}}" class="link centered" title="You can add caption to pictures.">
+                                <i class="fa fa-expand"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {%- endfor -%}
+        </div>
+        <!-- /gallery-isotope-->
+    </div>
+    <!-- /page -->
+</div>
