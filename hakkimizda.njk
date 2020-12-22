@@ -1,0 +1,212 @@
+---
+layout: layouts/base.njk
+eleventyNavigation:
+  key: Hakkımızda
+  order: 4
+
+baslik: Hakkımızda
+icerikbaslik: Gözalıcı Eğitim Ortamı
+icerikaltbaslik: Çocuğunuz için sağlanabilecek en optimize ortam
+hakkimizdayazi: Hakkımızda yazısı detaylı şekilde burada görüntülenecektir. mümkün olduğunca izah edici bilgilendirici ve aydınlatıcı olmalı
+hakkimizdabilgiler:
+    -
+        Bilgilendirme 1
+    -
+        Bilgilendirme 2
+    -
+        Bilgilendirme 3
+    -
+        Bilgilendirme 4
+    -
+        Bilgilendirme 5
+
+alticerikbaslik: Eğitim Planlamamız
+alticerikyazi: Eğitim planı ya da detayları hakkında kısa ve öz <br> bilgilendirme yapılabilecek alandır.
+alticerikbuton: Bize Yazın
+butonurl: /iletisim
+
+stats:
+    -
+        icon: flaticon-teacher
+        renk: bg-primary
+        sayi: 10
+        yazi: Uzman Eğitmen
+    -
+        icon: flaticon-family
+        renk: bg-secondary
+        sayi: 35
+        yazi: Mutlu Ailemiz
+    -
+        icon: flaticon-children
+        renk: bg-tertiary
+        sayi: 41
+        yazi: Öğrencilerimiz
+
+detaylar:
+    -
+        id: 1
+        baslik: Felsefemiz
+        icerik: Felsefe hakkında  bilgi yazısı girilecek
+    -
+        id: 2
+        baslik: Organizasyonumuz
+        icerik: Organizasyon hakkında bilgi yazısı girilecek
+    -
+        id: 3
+        baslik: İş ortaklerımız ve takımımız
+        icerik: Konuyl ilgili bilgilendirme yazısı girilecek
+
+detaylaryanbaslik: Nitelikli Personel
+detaylaryanaltbaslik: Konuyla ilgili alt başlık
+detaylaryanyazi2: Konu hakkında detaylı yazı alanı
+detaylaryanbuton: İletişim
+detaylaryanbuton2: Ekibimiz 
+butonekip: link gelecek
+
+---
+
+<div id="page-wrapper">
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <!-- jumbo-heading -->
+            <div class="jumbo-heading" data-aos="fade-down">
+                <h1>{{baslik}}</h1>
+                <!-- Breadcrumbs -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Anasayfa</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">{{baslik}}</li>
+                    </ol>
+                </nav>
+                <!-- /breadcrumb -->
+            </div>
+            <!-- /jumbo-heading -->
+        </div>
+        <!-- /container -->
+    </div>
+    <!-- /jumbotron -->
+    <!-- ==== Page Content ==== -->
+    <div class="page">
+        <div class="container block-padding">
+            <!--row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>{{icerikbaslik}}
+                    </h3>
+                    <p class="h7 mt-3 mb-4">
+                        {{icerikaltbaslik}}
+                    </p>
+                    <p>
+                        {{hakkimizdayazi}}
+                    </p>
+                    <ul class="custom pl-0">
+                        {%- for bilgi in hakkimizdabilgiler-%}
+                            <li>{{bilgi}}</li>
+                            {%-endfor-%}
+                        </ul>
+                        <!-- /custom-ul-->
+                    </div>
+                    <!-- /col-lg-->
+                    <div class="col-lg-4">
+                        <img src="img/about/about1.jpg" class="img-fluid blob" alt="">
+                        <!-- ornament starts-->
+                        <div class="ornament-bubbles" data-aos="fade-right"></div>
+                    </div>
+                    <!-- /col-lg-->
+                    <!-- notepad -->
+                    <div class="col-lg-12">
+                        <div class="notepad mt-5" data-aos="zoom-out">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <img src="img/about/about3.jpg" class="img-fluid rounded rotate1" alt="">
+                                    <!-- ornament starts-->
+                                    <div class="ornament-rainbow" data-aos="zoom-out"></div>
+                                </div>
+                                <!-- /col-lg-->
+                                <div class="col-lg-8">
+                                    <h4 class="mt-3">{{alticerikbaslik}}</h4>
+                                    <p class="res-margin">
+                                        {{alticerikyazi | safe}}
+                                    </p>
+                                    <a href="{{butonurl | url}}" class="btn btn-tertiary">{{alticerikbuton}}</a>
+                                </div>
+                                <!-- /col-lg-->
+                            </div>
+                            <!-- /row -->
+                        </div>
+                        <!-- /notepad -->
+                    </div>
+                    <!-- /col-lg-->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+            <!-- counter Section -->
+            <section id="counter-section" class="container-fluid counter-calltoaction overlay bg-fixed" data-100-bottom="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;">
+                <div id="counter" class="container">
+                    <div class="row col-lg-10 offset-lg-1">
+                        {%- for stat in stats -%}
+                            <div class="col-xl-4 col-md-4">
+                                <div class="counter">
+                                    <div class="counter-wrapper {{stat.renk}}">
+                                        <i class="counter-icon {{stat.icon}}"></i>
+                                        <!-- insert your final value on data-count= -->
+                                        <div class="counter-value" data-count="{{stat.sayi}}">0</div>
+                                        <h3 class="title">{{stat.yazi}}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        {%- endfor -%}
+                    </div>
+                    <!-- /row -->
+                </div>
+                <!-- /container -->
+            </section>
+            <!-- /section ends-->
+            <div class="container block-padding">
+                <!-- row-->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!-- accordion -->
+                        <div class="accordion">
+                            {%- for detay in detaylar -%}
+                                <div class="card">
+                                    <div class="card-header">
+                                        <a class="{% if detay.id != 1 %} collapsed {% endif %} card-link" data-toggle="collapse" href="#collapse{{detay.id}}">
+                                            {{detay.baslik}}
+                                        </a>
+                                    </div>
+                                    <div id="collapse{{detay.id}}" class="collapse {% if detay.id == 1 %} show {% endif %}" data-parent=".accordion">
+                                        <div class="card-body">
+                                            <p>
+                                                {{detay.icerik}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            {%- endfor -%}
+                        </div>
+                        <!-- /accordion -->
+                    </div>
+                    <!-- /col-lg-->
+                    <div class="col-lg-6">
+                        <h3 class="res-margin">{{detaylaryanbaslik}}</h3>
+                        <p class="h7 mt-3 mb-3">{{detaylaryanaltbaslik}}</p>
+                        <p>
+                            {{detaylaryanyazi2}}
+                        </p>
+                        <!-- buttons -->
+                        <a href="{{butonurl}}" class="btn btn-tertiary">{{detaylaryanbuton}}</a>
+                        <a href="{{butonekip}}" class="btn-margin btn btn-quaternary ml-1">{{detaylaryanbuton2}}</a>
+                    </div>
+                    <!-- /col-lg-->
+                </div>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
+        </div>
+        <!-- /page -->
+    </div>
