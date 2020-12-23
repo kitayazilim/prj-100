@@ -1680,7 +1680,7 @@ ul.slider-pagi {
 /* background on counter section */
 
 .counter-calltoaction {
-	background-image: url("../img/call-to-action/counterbg.jpg");
+	background-image: url("/img/istatistik-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;

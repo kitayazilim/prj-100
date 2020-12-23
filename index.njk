@@ -500,45 +500,18 @@ saglananlar:
     <section id="counter-section" class="container-fluid counter-calltoaction bg-fixed overlay" data-100-bottom="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;">
       <div id="counter" class="container">
         <div class="row col-lg-10 offset-lg-1">
-          <!-- Counter -->
-          <div class="col-xl-4 col-md-4">
-            <div class="counter">
-              <div class="counter-wrapper bg-primary">
-                <i class="counter-icon flaticon-teacher"></i>
-                <!-- insert your final value on data-count= -->
-                <div class="counter-value" data-count="30">0</div>
-                <h3 class="title">Professionals</h3>
+          {%- for stat in collections.about[0].data.stats -%}
+            <div class="col-xl-4 col-md-4">
+              <div class="counter">
+                <div class="counter-wrapper {{stat.renk}}">
+                  <i class="counter-icon {{stat.icon}}"></i>
+                  <!-- insert your final value on data-count= -->
+                  <div class="counter-value" data-count="{{stat.sayi}}">0</div>
+                  <h3 class="title">{{stat.yazi}}</h3>
+                </div>
               </div>
             </div>
-            <!-- /counter -->
-          </div>
-          <!-- /col-lg -->
-          <!-- Counter -->
-          <div class="col-xl-4 col-md-4">
-            <div class="counter">
-              <div class="counter-wrapper bg-secondary">
-                <i class="counter-icon  flaticon-family"></i>
-                <!-- insert your final value on data-count= -->
-                <div class="counter-value" data-count="74">0</div>
-                <h3 class="title">Happy parents</h3>
-              </div>
-            </div>
-            <!-- /counter -->
-          </div>
-          <!-- /col-lg -->
-          <!-- Counter -->
-          <div class="col-xl-4 col-md-4">
-            <div class="counter">
-              <div class="counter-wrapper bg-tertiary">
-                <i class="counter-icon flaticon-children"></i>
-                <!-- insert your final value on data-count= -->
-                <div class="counter-value" data-count="104">0</div>
-                <h3 class="title">Students</h3>
-              </div>
-            </div>
-            <!-- /counter -->
-          </div>
-          <!-- /col-lg -->
+          {%- endfor -%}
         </div>
         <!-- /row -->
       </div>
@@ -1153,8 +1126,8 @@ saglananlar:
         <div class="col-lg-10 offset-lg-1 text-center">
           <!-- section heading -->
           <div class="section-heading text-center">
-            <h2>Contact Us</h2>
-            <p class="subtitle">Get in Touch</p>
+            <h2>{{collections.contact[0].data.bizeulasin}}</h2>
+            <p class="subtitle">{{collections.contact[0].data.iletisimdekal}}</p>
           </div>
           <!-- /section-heading -->
           <!-- contact info boxes start-->
@@ -1166,9 +1139,9 @@ saglananlar:
                   <i class="fa fa-envelope top-icon"></i>
                   <!-- contact-icon info-->
                   <div class="contact-icon-info">
-                    <h5>Write us</h5>
+                    <h5>{{collections.contact[0].data.bizeyazin}}</h5>
                     <p>
-                      <a href="mailto:email@yoursite.com">email@yoursite.com</a>
+                      <a href="mailto:{{sitedata.email}}">{{sitedata.email}}</a>
                     </p>
                   </div>
                 </div>
@@ -1181,8 +1154,8 @@ saglananlar:
                   <i class="fa fa-map-marker top-icon"></i>
                   <!-- contact-icon info-->
                   <div class="contact-icon-info">
-                    <h5>Visit us</h5>
-                    <p>Street Name 123 - New York</p>
+                    <h5>{{collections.contact[0].data.ziyaret}}</h5>
+                    <p>{{sitedata.adres}}</p>
                   </div>
                 </div>
                 <!-- /contact-icon-->
@@ -1194,8 +1167,10 @@ saglananlar:
                   <i class="fa fa-phone top-icon"></i>
                   <!-- contact-icon info-->
                   <div class="contact-icon-info">
-                    <h5>Call us</h5>
-                    <p>(123) 456-789</p>
+                    <h5>{{collections.contact[0].data.arayin}}</h5>
+                    <p>
+                      <a href="tel:{{sitedata.tel}}">{{sitedata.tel}}</a>
+                    </p>
                   </div>
                 </div>
                 <!-- /contact-icon-->
@@ -1212,32 +1187,36 @@ saglananlar:
           <div class="row">
             <div class="col-lg-7">
               <!-- contact-info-->
-              <h4>Send us a message</h4>
+              <h4>
+                {{collections.contact[0].data.bizeulasin}}
+              </h4>
               <!-- Form Starts -->
               <div id="contact_form">
                 <div class="form-group">
                   <div class="row">
                     <div class="col-md-6">
-                      <label>Name<span class="required">*</span></label>
+                      <label>{{collections.contact[0].data.form.ad}}
+                        <span class="required">*</span></label>
                       <input type="text" name="name" class="form-control input-field" required="">
                     </div>
                     <div class="col-md-6">
-                      <label>Email Address
+                      <label>{{collections.contact[0].data.form.mail}}
                         <span class="required">*</span></label>
                       <input type="email" name="email" class="form-control input-field" required="">
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
-                      <label>Subject</label>
+                      <label>{{collections.contact[0].data.form.konu}}</label>
                       <input type="text" name="subject" class="form-control input-field">
                     </div>
                     <div class="col-md-12">
-                      <label>Message<span class="required">*</span></label>
+                      <label>{{collections.contact[0].data.form.mesaj}}
+                        <span class="required">*</span></label>
                       <textarea name="message" id="message" class="textarea-field form-control" rows="3" required=""></textarea>
                     </div>
                   </div>
-                  <button type="submit" id="submit_btn" value="Submit" class="btn btn-tertiary">Send message</button>
+                  <button type="submit" id="submit_btn" value="Submit" class="btn btn-tertiary">{{collections.contact[0].data.form.buton}}</button>
                 </div>
                 <!-- /form-group-->
                 <!-- Contact results -->
