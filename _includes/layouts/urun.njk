@@ -1,0 +1,113 @@
+---
+layout: layouts/base.njk
+---
+
+<!--Page Title-->
+<section class="page-title centred" style="background-image: url(/assets/images/background/page-title.jpg);">
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="title">
+                <h1 class="lang" key="urundetay">Ürün Detayı</h1>
+            </div>
+            <ul class="bread-crumb clearfix">
+                <li>
+                    <a href="/" class="lang" key="anasayfa">Anasayfa</a>
+                </li>
+                <li class="lang" key="urundetay">Ürün Detayı</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--End Page Title-->
+
+<!-- shop-details -->
+<section class="shop-details border-bottom" style="padding: 50px 0px 50px 0px;">
+    <div class="auto-container">
+        <div class="product-details-content">
+            <div class="row align-items-center clearfix">
+                <div class="col-lg-5 col-md-12 col-sm-12 image-column">
+                    <div class="slider-inner">
+                        <div class="bxslider">
+                            <div class="slider-content">
+                                <div class="product-image">
+                                    <figure class="image">
+                                        <a href="{{image | url}}" class="lightbox-image" data-fancybox="gallery"><img src="{{image | url}}" alt="{{title}}"></a>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-12 col-sm-12 content-column">
+                    <div class="product-details">
+                        <h2>{{title}}</h2>
+                        {# <h3>{{price}}</h3> #}
+                        {# <div class="text">
+                            <p>
+                                <span style="color:#b73604; font-weight:600; margin-right:5px">{{kolitext}}:</span>{{koliadet}}
+                            </p>
+                            <p>
+                                <span style="color:#b73604; font-weight:600; margin-right:5px">{{palettext}}:</span>{{paletadet}}
+                            </p>
+                        </div> #}
+                        <div class="text">
+                            <p>{{content | safe}}</p>
+                        </div>
+                        <div class="size-box">
+                            <h3>Size</h3>
+                            <ul class="select-inner">
+                                <li class="custom-check-box">
+                                    <div class="custom-controls-stacked">
+                                        <label class="custom-control material-checkbox">
+                                            <input type="checkbox" class="material-control-input" checked="">
+                                            <span class="material-control-indicator"></span>
+                                            <span class="description">200ml</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="custom-check-box">
+                                    <div class="custom-controls-stacked">
+                                        <label class="custom-control material-checkbox">
+                                            <input type="checkbox" class="material-control-input">
+                                            <span class="material-control-indicator"></span>
+                                            <span class="description">500ml</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="custom-check-box">
+                                    <div class="custom-controls-stacked">
+                                        <label class="custom-control material-checkbox">
+                                            <input type="checkbox" class="material-control-input">
+                                            <span class="material-control-indicator"></span>
+                                            <span class="description">1000ml</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="custom-check-box">
+                                    <div class="custom-controls-stacked">
+                                        <label class="custom-control material-checkbox">
+                                            <input type="checkbox" class="material-control-input">
+                                            <span class="material-control-indicator"></span>
+                                            <span class="description">1200ml</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="addto-cart-box">
+                            <ul class="clearfix">
+                                <li>
+                                    <button type="button" class="theme-btn-one" onclick="window.location.href='{{store1link}}'" style="padding: 7px 33px; font-size: 14px;">{{store1name}}</button>
+                                </li>
+                                <li>
+                                    <button type="button" class="theme-btn-two" onclick="window.location.href='{{store2link}}'">{{store2name}}</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- shop-details end -->

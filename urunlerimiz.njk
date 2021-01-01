@@ -1,0 +1,65 @@
+---
+layout: layouts/base.njk
+tags: urunler
+eleventyNavigation:
+  key: Ürünlerimiz
+  order: 2
+  aka: urunler
+
+urunler: Ürünlerimiz
+---
+
+<!--Page Title-->
+<section class="page-title centred" style="background-image: url({{'/assets/images/background/page-title.jpg' | url}});">
+  <div class="auto-container">
+    <div class="content-box">
+      <div class="title">
+        <h1 class="lang" key="urunler">{{urunler}}</h1>
+      </div>
+      <ul class="bread-crumb clearfix">
+        <li>
+          <a href="/" class="lang" key="anasayfa">Anasayfa</a>
+        </li>
+        <li class="lang" key="urunler">{{urunler}}</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--End Page Title-->
+
+<!-- shop-page-section -->
+<section class="shop-page-3 bg-color-1" style="padding: 20px 0px 40px 0px;">
+  <div class="auto-container">
+    <div class="our-shop" style="margin-top: 40px;">
+      <div class="row clearfix centred">
+        {% set products = collections.Urunler %}
+        {%- for pro in products -%}
+          <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+            <div class="shop-block-one">
+              <div class="inner-box">
+                <figure class="image-box">
+                  <a href="{{pro.url | url}}">
+                    <img src="{{pro.data.image | url}}" alt="{{pro.data.title}}">
+                  </a>
+                  <ul class="list clearfix">
+                    <li>
+                      <a href="{{pro.data.image | url}}" class="lightbox-image">
+                        <i class="fas fa-eye"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </figure>
+                <div class="lower-content">
+                  <h5 style="margin-top:30px">
+                    <a href="{{pro.url | url}}">{{pro.data.title | url}}</a>
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- shop-page-section end -->

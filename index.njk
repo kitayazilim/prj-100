@@ -3,46 +3,55 @@ layout: layouts/base.njk
 eleventyNavigation:
   key: Anasayfa
   order: 1
+  aka: anasayfa
 
+############ Slaytlar başlangıç ############
 slides:
   -
-    bgimage: img/slider/slide1.jpg
-    subject: Welcome to arena
-    h1: ABC TOTS bro
-    content: We offer high quality Daycare Services, contact us or visit us today for more information
+    bgimage: assets/images/banner/banner-1.jpg
+    subject: Arıcılık
+    h1: Taze & Doğal
+    content: Organik, ikliminin en iyi koşullarında elde ediyoruz.
+    aka: slide1
     link:
       text: Tıklayın
       url: http://www.bilmemne.com
-      button: quaternary
+      button: theme-btn-two
+    link2:
+      text: Mağazaya Git
+      url: http://www.bilmemne.com
+      button: banner-btn-one
   -
-    bgimage: img/slider/slide2.jpg
-    subject: Welcome to arena 2
-    h1: ABC TOTS bro 2
-    content: We offer high quality Daycare Services, contact us or visit us today for more information2
+    bgimage: assets/images/banner/banner-2.jpg
+    subject: Arıcılık
+    h1: Taze & Doğal
+    content: Organik. ikliminin en iyi koşullarında elde ediyoruz.
+    aka: slide2
     link:
-      text: Tıklayın2
-      url: http://www.bilmemne.com2
-      button: secondary
+      text: Tıklayın
+      url: http://www.bilmemne.com
+      button: theme-btn-two
+    link2:
+      text: Mağazaya Git
+      url: http://www.bilmemne.com
+      button: banner-btn-one
   -
-    bgimage: img/slider/slide2.jpg
-    subject: Welcome to arena 2
-    h1: ABC TOTS bro 2
-    content: We offer high quality Daycare Services, contact us or visit us today for more information2
+    bgimage: assets/images/banner/banner-3.jpg
+    subject: Arıcılık
+    h1: Taze & Doğal
+    content: Organik. ikliminin en iyi koşullarında elde ediyoruz.
+    aka: slide3
     link:
-      text: Tıklayın2
-      url: http://www.bilmemne.com2
-      button: secondary
+      text: Tıklayın
+      url: http://www.bilmemne.com
+      button: theme-btn-two
+    link2:
+      text: Mağazaya Git
+      url: http://www.bilmemne.com
+      button: banner-btn-one
 
-  -
-    bgimage: img/slider/slide2.jpg
-    subject: Welcome to arena 2
-    h1: ABC TOTS bro 2
-    content: We offer high quality Daycare Services, contact us or visit us today for more information2
-    link:
-      text: Tıklayın2
-      url: http://www.bilmemne.com2
-      button: secondary
 
+############ Kartlar başlangıç ############
 cards:
   -
     onbaslik: Alan 1
@@ -73,21 +82,24 @@ cards:
     bgimage: img/intro3.jpg
 
 
+############ Hakkımızda başlangıç ############
 hakkimizda:
-  baslik: Hakkımızda
+  hakkimiz: Hakkımızda
+  hakkimizkisayazi: Halen Türkiye’de toptan bal ticaretini devam ettiren firmamız, 2006 yılında Almanya’nın Berlin şehrinde bir paketleme tesisi kurarak faaliyetlerine burada devam etme kararı almıştır.
+  firmatarihi: Firma Tarihi
+  firmatarihikisayazi: Firmamız 1982 yılından bu yana Muğla, Marmaris, Köyceğiz ballarının Doğu Anadolu yaylalarının seçkin ballarının toptan ve perakende ticaretini yapmaktadır.
   altbaslik: Bizi Tanıyın
-  misyon: Misyonumuz
-  misyontext: misyonumuza dair yazı buraya gelecek detaylı yazı iyi olur.
-  linktext: Bize Ulaşın
-  url: link gelecek
-  bgimage: /img/about2.jpg
+  baslik: Yılların verdiği deneyim ve güvenle
+  button: Daha fazla
+  url: /hakkimizda
 
+############ Testimonal başlangıç ############
 testimonal: Ne söylediler
 testimonals:
   -
     soyleyen: Söyleyen Kişi
     meslek: Mesleği
-    soylenen: Kişinin söylediği yazı buraya yazılacak. 
+    soylenen: Kişinin söylediği yazı buraya yazılacak. Yapılan yorumlar güven açısından önemlidir. dikkate alınır
     resim: img/team/team1.jpg
   -
     soyleyen: Söyleyen Kişi
@@ -105,26 +117,15 @@ testimonals:
     soylenen: Kişinin söylediği yazı buraya yazılacak. 
     resim: img/team/team1.jpg
 
+
+
+############ İmkanlar başlangıç ############
 saglananlarbaslik: Neler Sağlıyoruz
 saglananlaralt : Çocuğunuz için en iyisi
 saglananlarimage: img/imkanlar.jpg
-saglananlar:
-  -
-    baslik: imkan 1
-    detay: imkan ile ilgili detaylı bilgi
-    icon: flaticon-maternity
-  -
-    baslik: imkan 1
-    detay: imkan ile ilgili detaylı bilgi
-    icon: flaticon-open-book-1
-  -
-    baslik: imkan 1
-    detay: imkan ile ilgili detaylı bilgi
-    icon: flaticon-classroom-1
-  -
-    baslik: imkan 1
-    detay: imkan ile ilgili detaylı bilgi
-    icon: flaticon-baby-boy
+
+urunlerimiz: Ürünlerimiz
+magazaziyaret : Mağazamızı Ziyaret Edin
 ---
 
 {# {% set maxPosts = collections.posts.length | min(3) %}
@@ -136,1108 +137,581 @@ saglananlar:
 
 <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p> #}
 
-<!-- page wrapper starts -->
-<div id="page-wrapper">
-  <!-- ==== Slider ==== -->
-  <div class="container-fluid p-0">
-    <!-- Slider -->
-    <div id="slider" class="slider-full" style="width:1200px;height:750px;margin:0 auto;margin-bottom: 0px;">
-      {%- for slide in slides -%}
-        <!-- Slide 1 -->
-        <div class="ls-slide" data-ls="duration:4000; transition2d:7;">
-          <!-- bg image -->
-          <img src="{{slide.bgimage | url}}" class="ls-bg" alt=""/>
-          <!-- text -->
-          <div class="ls-l header-wrapper " data-ls="offsetyin:150; durationin:700; delayin:200; easingin:easeOutQuint; rotatexin:20; scalexin:1.4; durationout:400;">
-            <div class="header-text text-light">
-              <span class="text-light">{{slide.subject}}</span>
-              <h1>{{slide.h1}}</h1>
-              <!--the div below is hidden on small screens -->
-              <div class="hidden-small">
-                <p class="header-p">{{slide.content}}</p>
-                <a class="btn btn-{{slide.link.button}}" href="{{slide.link.url | url}}">{{slide.link.text}}</a>
-              </div>
-              <!--/d-none -->
+<!-- banner-section -->
+<section class="banner-section style-two">
+  <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
+    {%- for slide in slides -%}
+      <div class="slide-item">
+        <div class="image-layer" style="background-image:url({{slide.bgimage}})"></div>
+        <div class="auto-container">
+          <div class="content-box">
+            <h1>
+              <label class="lang" key="{{slide.aka}}h1">{{slide.h1}}</label>
+              <span class="lang" key="{{slide.aka}}subject">{{slide.subject}}</span></h1>
+            <h2 class="lang" key="{{slide.aka}}content">{{slide.content}}</h2>
+            <div class="btn-box">
+              <a href="{{slide.link.url | url}}" class="{{slide.link.button}} lang" key="{{slide.aka}}linktext">{{slide.link.text}}</a>
+              <a href="{{slide.link2.url | url}}" class="{{slide.link2.button}} lang" key="{{slide.aka}}link2text">{{slide.link2.text}}</a>
             </div>
-            <!-- header-text -->
           </div>
-          <!-- ls-l -->
         </div>
-        <!-- ls-slide -->
-      {%- endfor -%}
-    </div>
-    <!-- /slider -->
-    <svg version="1.1" id="divider" class="slider-divider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" preserveaspectratio="none slice" xml:space="preserve">
-      <path class="st0" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
-    </svg>
-    <!-- /Slider ends -->
-  </div>
-  <!-- /container-fluid -->
-  <!-- ==== Page Content ==== -->
-  <div class="container">
-    <!-- section -->
-    <section id="intro-cards" class="row pb-0">
-      {%- for card in cards -%}
-        <div class="col-lg-4" data-aos="zoom-out">
-          <div class="card card-flip">
-            <!-- front of card -->
-            <div class="card {{card.bgcolor}} text-light ">
-              <div class="p-5">
-                <h5 class="card-title text-light">{{card.onbaslik}}</h5>
-                <p class="card-text">
-                  {{card.ontext}}
-                </p>
-                <!-- button show on mobile only,where flip is disabled -->
-                <a href="{{card.url}}" class="btn d-lg-none">{{card.linktext}}</a>
-              </div>
-              <!-- /p-5 -->
-              <!-- image -->
-              <img class="card-img" src="{{card.bgimage}}" alt="">
-            </div>
-            <!-- /card -->
-            <!-- back of card -->
-            <div class="card {{card.bgcolor}} text-light card-back">
-              <div class="card-body d-flex justify-content-center align-items-center">
-                <div class="p-4">
-                  <h5 class="card-title text-light">{{card.arkabaslik}}</h5>
-                  <p class="card-text">
-                    {{card.arkatext}}
-                  </p>
-                  <!-- button -->
-                  <a href="{{card.url}}" class="btn">{{card.linktext}}</a>
-                </div>
-                <!-- /p-4 -->
-              </div>
-              <!-- /card-body -->
-            </div>
-            <!-- /card -->
-          </div>
-          <!--/col-lg -->
-        </div>
-      {%- endfor -%}
-    </section>
-    <!-- #intro-cards -->
-  </div>
-  <!-- /container -->
-  <!-- section -->
-  <section id="about-home" class="container-fluid pb-0">
-    <div class="container">
-      <!-- section heading -->
-      <div class="section-heading text-center">
-        <h2>{{hakkimizda.baslik}}</h2>
-        <p class="subtitle">{{hakkimizda.altbaslik}}</p>
       </div>
-      <!-- /section-heading -->
-      <div class="row">
-        <div class="col-lg-7 ">
-          <h3>{{hakkimizda.misyon}}</h3>
-          <p class="mt-4 res-margin">Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecena Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-          <p>Nec elementum ipsum convall. Aliquam erat volutpat In id fermentum augue, ut pellentesque leo. Maecen Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall Maecenas at arcu risus scelerisque laoree.</p>
-          <a href="{{hakkimizda.url}}" class="btn btn-secondary ">{{hakkimizda.linktext}}</a>
-        </div>
-        <!-- /col-lg -->
-        <div class="col-lg-5 res-margin">
-          <!-- image -->
-          <img class="img-fluid rounded" src="{{hakkimizda.bgimage}}" alt="">
-          <!-- ornament starts-->
-          <div class="ornament-rainbow" data-aos="zoom-out"></div>
-        </div>
-        <!-- /col-lg -->
-      </div>
-      <!-- /row -->
-      <h3 class="mt-5 text-center">{{testimonal}}:</h3>
-      <div class="row">
-        <!-- testimonials -->
-        <!-- testimonial carousel -->
-        <div class="carousel-2items owl-carousel owl-theme col-md-12">
+    {%- endfor -%}
+  </div>
+</section>
+<!-- banner-section end -->
 
-          {%- for testim in testimonals -%}
-            <div class="testimonial">
-              <div class="content">
-                <p class="description">
-                  {{testim.soylenen}}
-                </p>
-              </div>
-              <!-- /content -->
-              <div class="testimonial-pic">
-                <img src="{{testim.resim}}" class="img-fluid" alt="">
-              </div>
-              <!-- /testimonial-pic -->
-              <div class="testimonial-review">
-                <h5 class="testimonial-title">{{testim.soyleyen}}</h5>
-                <span class="post">{{testim.meslek}}</span>
-              </div>
-              <!-- /testimonial-review -->
-            </div>
-          {%- endfor -%}
-        </div>
-        <!-- /owl-testimonial -->
-      </div>
-      <!-- /row -->
+<!-- feature-style-two -->
+<section class="feature-style-two centred">
+  <div class="auto-container">
+    <div class="sec-title style-two">
+      <p>Who We Are</p>
+      <h2>Best features</h2>
     </div>
-    <!-- /container-->
-    <!-- whale in water scene -->
-    <!-- whale -->
-    <img src="img/ornaments/whale.png" class="floating-whale" alt="">
-    <!-- waves -->
-    <div class="waveHorizontals">
-      <div id="waveHorizontal1" class="waveHorizontal"></div>
-      <div id="waveHorizontal2" class="waveHorizontal"></div>
-      <div id="waveHorizontal3" class="waveHorizontal"></div>
+    <div class="row clearfix">
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+        <div class="feature-block-two">
+          <div class="inner-box">
+            <div class="content-box">
+              <div class="icon-box">
+                <i class="flaticon-flower"></i>
+              </div>
+              <h5>Flowers produce</h5>
+              <p>Sed ut perspiciatis unde omnis natus volup</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="overlay-content" style="background-image: url(assets/images/resource/block-bg-1.jpg);">
+              <div class="icon-box">
+                <i class="flaticon-flower"></i>
+              </div>
+              <h5>Flowers produce</h5>
+              <p>But I must explain to you how all thimistaken idea of denou pleas</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+        <div class="feature-block-two">
+          <div class="inner-box">
+            <div class="content-box">
+              <div class="icon-box">
+                <i class="flaticon-bee"></i>
+              </div>
+              <h5>Natural Bees</h5>
+              <p>Sed ut perspiciatis unde omnis natus volup</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="overlay-content" style="background-image: url(assets/images/resource/block-bg-1.jpg);">
+              <div class="icon-box">
+                <i class="flaticon-bee"></i>
+              </div>
+              <h5>Natural Bees</h5>
+              <p>But I must explain to you how all thimistaken idea of denou pleas</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+        <div class="feature-block-two">
+          <div class="inner-box">
+            <div class="content-box">
+              <div class="icon-box">
+                <i class="flaticon-hive"></i>
+              </div>
+              <h5>Bees seal cells</h5>
+              <p>Sed ut perspiciatis unde omnis natus volup</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="overlay-content" style="background-image: url(assets/images/resource/block-bg-1.jpg);">
+              <div class="icon-box">
+                <i class="flaticon-hive"></i>
+              </div>
+              <h5>Bees seal cells</h5>
+              <p>But I must explain to you how all thimistaken idea of denou pleas</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+        <div class="feature-block-two">
+          <div class="inner-box">
+            <div class="content-box">
+              <div class="icon-box">
+                <i class="flaticon-beehive"></i>
+              </div>
+              <h5>Well products</h5>
+              <p>Sed ut perspiciatis unde omnis natus volup</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="overlay-content" style="background-image: url(assets/images/resource/block-bg-1.jpg);">
+              <div class="icon-box">
+                <i class="flaticon-beehive"></i>
+              </div>
+              <h5>Well products</h5>
+              <p>But I must explain to you how all thimistaken idea of denou pleas</p>
+              <div class="link">
+                <a href="index-2.html">
+                  <i class="far fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- sea -->
-    <div class="sea"></div>
-    <!--/ whale in water scene ends -->
-  </section>
-  <!-- /section ends -->
-  <!-- section -->
-  <section id="features" class="bg-secondary text-light">
-    <div class="container">
-      <!-- section heading -->
-      <div class="section-heading text-center">
-        <h2>{{saglananlarbaslik}}</h2>
-        <p class="subtitle">{{saglananlaralt}}</p>
-      </div>
-      <!-- /section-heading -->
-      <!-- features -->
-      <div class="row ">
-        <div class="col-lg-6">
-          <div class="row ">
-            {%- for imkan in saglananlar-%}
-              <div class="col-md-6 col-lg-6">
-                <div class="feature-with-icon">
-                  <div class="icon-features">
-                    <i class="{{imkan.icon}} text-primary"></i>
-                  </div>
-                  <h5>{{imkan.baslik}}</h5>
-                  <p>{{imkan.detay}}</p>
-                </div>
-              </div>
-              {%-endfor-%}
-            </div>
-          </div>
-          <!-- /col-l -->
-          <div class="col-lg-6 features-bg">
-            <!-- image -->
-            <img src="{{saglananlarimage}}" alt="" class="img-fluid" data-aos="zoom-out" data-aos-delay="300"/>
-          </div>
-          <!-- /col-l -->
-        </div>
-        <!-- /row -->
-      </div>
-      <!-- /container -->
-    </section>
-    <!-- /section ends -->
-    <!-- section -->
-    <section id="services-home" class="container-fluid">
-      <div class="container pb-5">
-        <!-- section heading -->
-        <div class="section-heading text-center">
-          <h2>Our Services</h2>
-          <p class="subtitle">what we offer</p>
-        </div>
-        <!-- /section heading -->
-        <!-- row -->
-        <div class="row vertical-tabs">
-          <div class="col-lg-12">
-            <!-- navigation -->
-            <div class="tabs-with-icon">
-              <nav>
-                <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <a class="nav-item nav-link active" id="tab1-tab" data-toggle="tab" href="#tab1">
-                    <i class="flaticon-abc-block"></i>Daycare</a>
-                  <a class="nav-item nav-link" id="tab2-tab" data-toggle="tab" href="#tab2">
-                    <i class="flaticon-kids-1"></i>Summer Camp</a>
-                  <a class="nav-item nav-link" id="tab3-tab" data-toggle="tab" href="#tab3">
-                    <i class="flaticon-smiling-baby"></i>Infant care</a>
-                  <a class="nav-item nav-link" id="tab4-tab" data-toggle="tab" href="#tab4">
-                    <i class="flaticon-blackboard"></i>Classes</a>
-                  <a class="nav-item nav-link" id="tab5-tab" data-toggle="tab" href="#tab5">
-                    <i class="flaticon-kids"></i>Activities</a>
-                </div>
-              </nav>
-              <!-- tab-content -->
-              <div class="tab-content block-padding bg-light" id="nav-tabContent">
-                <div class="tab-pane active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
-                  <!-- row -->
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <!-- image -->
-                      <img src="img/services/service1.jpg" alt="" class="rounded img-fluid">
-                      <!-- ornament starts-->
-                      <div class="ornament-rainbow" data-aos="fade-right"></div>
-                    </div>
-                    <!-- col-lg -->
-                    <div class="col-lg-6">
-                      <h3>Daycare</h3>
-                      <p>Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-                      <ul class="custom pl-0">
-                        <li>Over 30 Qualified professionals</li>
-                        <li>We offer you our quality services since 2002</li>
-                        <li>Educational activities in our daily plan</li>
-                      </ul>
-                      <!-- Button -->
-                      <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
-                    </div>
-                    <!-- /col-lg -->
-                  </div>
-                  <!-- row -->
-                </div>
-                <!-- ./Tab-pane -->
-                <div class="tab-pane" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <h3>Summer Camp</h3>
-                      <p>Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-                      <ul class="custom pl-0">
-                        <li>Over 30 Qualified professionals</li>
-                        <li>We offer you our quality services since 2002</li>
-                        <li>Educational activities in our daily plan</li>
-                      </ul>
-                      <!-- Button -->
-                      <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
-                    </div>
-                    <!-- /col-lg -->
-                    <div class="col-lg-6 res-margin">
-                      <!-- image -->
-                      <img src="img/services/service2.jpg" alt="" class="rounded img-fluid">
-                      <!-- ornament starts-->
-                      <div class="ornament-stars" data-aos="fade-right"></div>
-                    </div>
-                    <!-- col-lg -->
-                  </div>
-                  <!-- row -->
-                </div>
-                <!-- ./Tab-pane -->
-                <div class="tab-pane" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <!-- image -->
-                      <img src="img/services/service3.jpg" alt="" class="rounded img-fluid">
-                      <!-- ornament starts-->
-                      <div class="ornament-bubbles" data-aos="fade-right"></div>
-                    </div>
-                    <!-- col-lg -->
-                    <div class="col-lg-6">
-                      <h3>Infant Care</h3>
-                      <p>Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-                      <ul class="custom pl-0">
-                        <li>Over 30 Qualified professionals</li>
-                        <li>We offer you our quality services since 2002</li>
-                        <li>Educational activities in our daily plan</li>
-                      </ul>
-                      <!-- Button -->
-                      <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
-                    </div>
-                    <!-- /col-lg -->
-                  </div>
-                  <!-- row -->
-                </div>
-                <!-- ./Tab-pane -->
-                <div class="tab-pane" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <h3>Classes</h3>
-                      <p>Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-                      <ul class="custom pl-0">
-                        <li>Over 30 Qualified professionals</li>
-                        <li>We offer you our quality services since 2002</li>
-                        <li>Educational activities in our daily plan</li>
-                      </ul>
-                      <!-- Button -->
-                      <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
-                    </div>
-                    <!-- /col-lg -->
-                    <div class="col-lg-6 res-margin">
-                      <!-- image -->
-                      <img src="img/services/service4.jpg" alt="" class="rounded img-fluid">
-                      <!-- ornament starts-->
-                      <div class="ornament-stars" data-aos="fade-right"></div>
-                    </div>
-                    <!-- col-lg -->
-                  </div>
-                  <!-- row -->
-                </div>
-                <!-- ./Tab-pane -->
-                <div class="tab-pane" id="tab5" role="tabpanel" aria-labelledby="tab5-tab">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <!-- image -->
-                      <img src="img/services/service5.jpg" alt="" class="rounded img-fluid">
-                      <!-- ornament starts-->
-                      <div class="ornament-rainbow" data-aos="fade-right"></div>
-                    </div>
-                    <!-- col-lg -->
-                    <div class="col-lg-6">
-                      <h3>Activities</h3>
-                      <p>Maecenas at arcu risus. Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis maximus. Etiam rhoncus leo a dolor placerat, nec elementum ipsum convall.</p>
-                      <ul class="custom pl-0">
-                        <li>Over 30 Qualified professionals</li>
-                        <li>We offer you our quality services since 2002</li>
-                        <li>Educational activities in our daily plan</li>
-                      </ul>
-                      <!-- Button -->
-                      <a href="services-single.html" class="btn btn-secondary mt-4">Read More</a>
-                    </div>
-                    <!-- /col-lg -->
-                  </div>
-                  <!-- row -->
-                </div>
-                <!-- ./Tab-pane -->
-              </div>
-              <!-- ./Tab-content -->
-            </div>
-            <!-- vertical-tabs -->
-          </div>
-          <!-- /col-lg-6 -->
-        </div>
-        <!-- /row -->
-      </div>
-      <!-- /container -->
-    </section>
-    <!-- /section ends -->
-    <!-- Section -->
-    <section id="counter-section" class="container-fluid counter-calltoaction bg-fixed overlay" data-100-bottom="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;">
-      <div id="counter" class="container">
-        <div class="row col-lg-10 offset-lg-1">
-          {%- for stat in collections.about[0].data.stats -%}
-            <div class="col-xl-4 col-md-4">
-              <div class="counter">
-                <div class="counter-wrapper {{stat.renk}}">
-                  <i class="counter-icon {{stat.icon}}"></i>
-                  <!-- insert your final value on data-count= -->
-                  <div class="counter-value" data-count="{{stat.sayi}}">0</div>
-                  <h3 class="title">{{stat.yazi}}</h3>
-                </div>
-              </div>
-            </div>
-          {%- endfor -%}
-        </div>
-        <!-- /row -->
-      </div>
-      <!-- /container -->
-    </section>
-    <!-- /section ends-->
-    <!-- section-->
-    <section id="team-home" class="container">
-      <!-- section heading -->
-      <div class="section-heading text-center">
-        <h2>Our Team</h2>
-        <p class="subtitle">Qualified Professionals</p>
-      </div>
-      <!-- /section-heading -->
-      <div class="row">
-        <div class="col-lg-7">
-          <h3>Meet our Talented Team</h3>
-          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <ul class="checkmark pl-0 font-weight-bold">
-            <li>Over 30 Qualified professionals</li>
-            <li>We offer you our quality services since 2002</li>
-            <li>Fun and educational activities in our daily plan</li>
-          </ul>
-          <!-- /ul-->
-        </div>
-        <!-- /col-lg-->
-        <div class="col-lg-5 res-margin">
-          <img src="img/team/team-home.jpg" alt="" class="img-fluid blob2">
-          <!-- ornament starts-->
-          <div class="ornament-stars" data-aos="fade-down"></div>
-        </div>
-        <!-- /col-lg-->
-        <div class="col-lg-12">
-          <!-- team carousel -->
-          <div class="carousel-4items owl-carousel owl-theme mt-5">
-            <!-- Team member 1 -->
-            <div class="col-md-12 team-style1 notepad">
-              <div class="team_img">
-                <a href="team-single.html">
-                  <img src="img/team/team1.jpg" class="img-fluid" alt="">
-                </a>
-                <!-- social icons -->
-                <ul class="social">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /team_img -->
-              <div class="team-content">
-                <a href="team-single.html">
-                  <h5 class="title">Laura Smith</h5>
-                </a>
-                <span class="post">Teacher</span>
-                <p>Id fermentum augue, ut pellen tesque leo nas. Maecenas at arcu risus Donec com modo.</p>
-              </div>
-              <!-- /team-content -->
-            </div>
-            <!-- /team-style1 -->
-            <!-- Team member 2 -->
-            <div class="col-md-12 team-style1 notepad">
-              <div class="team_img">
-                <a href="team-single.html">
-                  <img src="img/team/team2.jpg" class="img-fluid" alt="">
-                </a>
-                <!-- social icons -->
-                <ul class="social">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /team_img -->
-              <div class="team-content">
-                <a href="team-single.html">
-                  <h5 class="title">John Doe</h5>
-                </a>
-                <span class="post">Administrator</span>
-                <p>Id fermentum augue, ut pellen tesque leo nas. Maecenas at arcu risus Donec com modo.</p>
-              </div>
-              <!-- /team-content -->
-            </div>
-            <!-- /team-style1 -->
-            <!-- Team member 3 -->
-            <div class="col-md-12 team-style1 notepad">
-              <div class="team_img">
-                <a href="team-single.html">
-                  <img src="img/team/team3.jpg" class="img-fluid" alt="">
-                </a>
-                <!-- social icons -->
-                <ul class="social">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /team_img -->
-              <div class="team-content">
-                <a href="team-single.html">
-                  <h5 class="title">Meghan Smith</h5>
-                </a>
-                <span class="post">Assitant Teacher</span>
-                <p>Id fermentum augue, ut pellen tesque leo nas. Maecenas at arcu risus Donec com modo.</p>
-              </div>
-              <!-- /team-content -->
-            </div>
-            <!-- /team-style1 -->
-            <!-- Team member 4 -->
-            <div class="col-md-12 team-style1 notepad">
-              <div class="team_img">
-                <a href="team-single.html">
-                  <img src="img/team/team4.jpg" class="img-fluid" alt="">
-                </a>
-                <!-- social icons -->
-                <ul class="social">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /team_img -->
-              <div class="team-content">
-                <a href="team-single.html">
-                  <h5 class="title">Mika Doe</h5>
-                </a>
-                <span class="post">Teacher</span>
-                <p>Id fermentum augue, ut pellen tesque leo nas. Maecenas at arcu risus Donec com modo.</p>
-              </div>
-              <!-- /team-content -->
-            </div>
-            <!-- /team-style1 -->
-            <!-- Team member 5 -->
-            <div class="col-md-12 team-style1 notepad">
-              <div class="team_img">
-                <a href="team-single.html">
-                  <img src="img/team/team5.jpg" class="img-fluid" alt="">
-                </a>
-                <!-- social icons -->
-                <ul class="social">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-envelope"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-facebook"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <!-- /team_img -->
-              <div class="team-content">
-                <a href="team-single.html">
-                  <h5 class="title">Jillian Smith</h5>
-                </a>
-                <span class="post">Asssitant Teacher</span>
-                <p>Id fermentum augue, ut pellen tesque leo nas. Maecenas at arcu risus Donec com modo.</p>
-              </div>
-              <!-- /team-content -->
-            </div>
-            <!-- /team-style1 -->
-          </div>
-          <!-- /owl-team-->
-        </div>
-        <!-- /col-lg-->
-      </div>
-      <!-- /row-->
-    </section>
-    <!-- /section ends-->
-    <!-- section -->
-    <section id="gallery-home" class="container-fluid bg-tertiary no-bg-sm">
-      <div class="container">
-        <!-- section heading -->
-        <div class="section-heading text-center text-light">
-          <h2>Gallery</h2>
-          <p class="subtitle">Our facilities</p>
-        </div>
-        <!-- /section-heading -->
-        <!-- centered Gallery navigation -->
-        <ul class="nav nav-pills category-isotope center-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="#" data-toggle="tab" data-filter="*">All</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="tab" data-filter=".school">Our School</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="tab" data-filter=".activities">Activities</a>
-          </li>
-        </ul>
-        <!-- /ul -->
-        <!-- Gallery -->
-        <div id="gallery-isotope" class="row mt-5 magnific-popup">
-          <!-- Image 1 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 activities">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery1.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery1.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 2 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery2.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery2.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 3 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery3.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery3.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 4 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 activities">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery4.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery4.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 5 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery5.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery5.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 6 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery6.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery6.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 7 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 activities">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery7.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery7.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 8 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 activities">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery8.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery8.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 9 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery9.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery9.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 10 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery10.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery10.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 11 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery11.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery11.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- Image 12 -->
-          <div class="col-sm-6 col-md-6 col-lg-4 school">
-            <div class="portfolio-item">
-              <div class="gallery-thumb">
-                <img class="img-fluid " src="img/gallery/gallery12.jpg" alt="">
-                <span class="overlay-mask"></span>
-                <a href="img/gallery/gallery12.jpg" class="link centered" title="You can add caption to pictures.">
-                  <i class="fa fa-expand"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /gallery-isotope-->
-      </div>
-      <!-- /container-->
-    </section>
-    <!-- /section ends -->
-    <!-- section -->
-    <section id="blogprev-home" data-100-bottom="background-position: 0% 120%;" data-top-bottom="background-position: 0% 100%;">
-      <div class="container">
-        <!-- section heading -->
-        <div class="section-heading text-center">
-          <h2>Latest Blog Posts</h2>
-          <p class="subtitle">Our Updates</p>
-        </div>
-        <!-- /section-heading -->
-        <!-- blog carousel -->
-        <div class="carousel-3items owl-carousel owl-theme mt-0">
-          <!-- blog-box -->
-          <div class="blog-box">
-            <!-- image -->
-            <a href="blog-single.html">
-              <div class="image"><img src="img/blog/blogstyle2-1.jpg" alt=""/></div>
-            </a>
-            <!-- blog-box-caption -->
-            <div class="blog-box-caption">
-              <!-- date -->
-              <div class="date">
-                <span class="day">12</span><span class="month">May</span></div>
-              <a href="blog-single.html">
-                <h4>Helping Your Child with Socialization</h4>
-              </a>
-              <!-- /link -->
-              <p>
-                Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis...
-              </p>
-            </div>
-            <!-- blog-box-footer -->
-            <div class="blog-box-footer">
-              <div class="author">Posted by<a href="#">
-                  <i class="fas fa-user"></i>Lauren Smith</a>
-              </div>
-              <div class="comments">
-                <a href="blog-single.html">
-                  <i class="fas fa-comment"></i>23</a>
-              </div>
-              <!-- Button -->
-              <div class="text-center col-md-12">
-                <a href="blog-single.html" class="btn btn-primary ">Read more</a>
-              </div>
-            </div>
-            <!-- /blog-box-footer -->
-          </div>
-          <!-- /blog-box -->
-          <!-- blog-box -->
-          <div class="blog-box">
-            <!-- image -->
-            <a href="blog-single.html">
-              <div class="image"><img src="img/blog/blogstyle2-2.jpg" alt=""/></div>
-            </a>
-            <!-- blog-box-caption -->
-            <div class="blog-box-caption">
-              <!-- date -->
-              <div class="date">
-                <span class="day">28</span><span class="month">June</span></div>
-              <a href="blog-single.html">
-                <h4>Our Healthy meals that toddlers love</h4>
-              </a>
-              <!-- /link -->
-              <p>
-                Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis...
-              </p>
-            </div>
-            <!-- blog-box-footer -->
-            <div class="blog-box-footer">
-              <div class="author">Posted by<a href="#">
-                  <i class="fas fa-user"></i>Jonas Doe</a>
-              </div>
-              <div class="comments">
-                <a href="blog-single.html">
-                  <i class="fas fa-comment"></i>5</a>
-              </div>
-              <!-- Button -->
-              <div class="text-center col-md-12">
-                <a href="blog-single.html" class="btn btn-primary ">Read more</a>
-              </div>
-            </div>
-            <!-- /blog-box-footer -->
-          </div>
-          <!-- /blog-box -->
-          <!-- blog-box -->
-          <div class="blog-box">
-            <!-- image -->
-            <a href="blog-single.html">
-              <div class="image"><img src="img/blog/blogstyle2-3.jpg" alt=""/></div>
-            </a>
-            <!-- blog-box-caption -->
-            <div class="blog-box-caption">
-              <!-- date -->
-              <div class="date">
-                <span class="day">02</span><span class="month">July</span></div>
-              <a href="blog-single.html">
-                <h4>20 Fun Activities to Do With Your Kids</h4>
-              </a>
-              <!-- /link -->
-              <p>
-                Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis...
-              </p>
-            </div>
-            <!-- blog-box-footer -->
-            <div class="blog-box-footer">
-              <div class="author">Posted by<a href="#">
-                  <i class="fas fa-user"></i>Lauren Smith</a>
-              </div>
-              <div class="comments">
-                <a href="blog-single.html">
-                  <i class="fas fa-comment"></i>10</a>
-              </div>
-              <!-- Button -->
-              <div class="text-center col-md-12">
-                <a href="blog-single.html" class="btn btn-primary ">Read more</a>
-              </div>
-            </div>
-            <!-- /blog-box-footer -->
-          </div>
-          <!-- /blog-box -->
-          <!-- blog-box -->
-          <div class="blog-box">
-            <!-- image -->
-            <a href="blog-single.html">
-              <div class="image"><img src="img/blog/blogstyle2-4.jpg" alt=""/></div>
-            </a>
-            <!-- blog-box-caption -->
-            <div class="blog-box-caption">
-              <!-- date -->
-              <div class="date">
-                <span class="day">18</span><span class="month">June</span></div>
-              <a href="blog-single.html">
-                <h4>Brain-Boosting Activities for Children</h4>
-              </a>
-              <!-- /link -->
-              <p>
-                Donec commodo sodales ex, scelerisque laoreet nibh hendrerit id. In aliquet magna nec lobortis...
-              </p>
-            </div>
-            <!-- blog-box-footer -->
-            <div class="blog-box-footer">
-              <div class="author">Posted by<a href="#">
-                  <i class="fas fa-user"></i>Jonas Doe</a>
-              </div>
-              <div class="comments">
-                <a href="blog-single.html">
-                  <i class="fas fa-comment"></i>11</a>
-              </div>
-              <!-- Button -->
-              <div class="text-center col-md-12">
-                <a href="blog-single.html" class="btn btn-primary ">Read more</a>
-              </div>
-            </div>
-            <!-- /blog-box-footer -->
-          </div>
-          <!-- /blog-box -->
-        </div>
-        <!-- /owl-carousel -->
-      </div>
-      <!-- /container -->
-    </section>
-    <!-- /section ends-->
-    <!-- section -->
-    <section id="callout" class=" container-fluid bg-fixed">
-      <div class="container">
-        <!-- row -->
-        <div class="row">
-          <div class="col-lg-6 p-0" data-start="right: 50%;" data-center="right:-5%;">
-            <!-- image -->
-            <img src="img/call-to-action/calltoactionbg.jpg" class="img-fluid img-rounded" alt="">
-          </div>
-          <!-- text box -->
-          <div class="col-lg-6 bg-secondary p-5 justify-content-center align-self-center" data-start="left: 50%;" data-center="left:-5%;">
-            <div class="text-light justify-content-center align-self-center">
-              <h3>Enroll Today</h3>
-              <p>Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus vi tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-              <a href="contact.html" class="btn btn-tertiary">Contact us</a>
-            </div>
-            <!-- /text-light -->
-          </div>
-          <!-- /col-lg -->
-        </div>
-        <!-- /row -->
-      </div>
-      <!-- /container -->
-    </section>
-    <!-- /section ends -->
-    <!-- Section -->
-    <section id="contact-home" class="container">
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1 text-center">
-          <!-- section heading -->
-          <div class="section-heading text-center">
-            <h2>{{collections.contact[0].data.bizeulasin}}</h2>
-            <p class="subtitle">{{collections.contact[0].data.iletisimdekal}}</p>
-          </div>
-          <!-- /section-heading -->
-          <!-- contact info boxes start-->
-          <div class="contact-info res-margin">
-            <div class="row res-margin">
-              <div class="col-lg-4">
-                <div class="contact-icon bg-secondary text-light">
-                  <!---icon-->
-                  <i class="fa fa-envelope top-icon"></i>
-                  <!-- contact-icon info-->
-                  <div class="contact-icon-info">
-                    <h5>{{collections.contact[0].data.bizeyazin}}</h5>
-                    <p>
-                      <a href="mailto:{{sitedata.email}}">{{sitedata.email}}</a>
-                    </p>
-                  </div>
-                </div>
-                <!-- /contact-icon-->
-              </div>
-              <!-- /col-lg-->
-              <div class="col-lg-4 res-margin">
-                <div class="contact-icon bg-secondary text-light">
-                  <!---icon-->
-                  <i class="fa fa-map-marker top-icon"></i>
-                  <!-- contact-icon info-->
-                  <div class="contact-icon-info">
-                    <h5>{{collections.contact[0].data.ziyaret}}</h5>
-                    <p>{{sitedata.adres}}</p>
-                  </div>
-                </div>
-                <!-- /contact-icon-->
-              </div>
-              <!-- /col-lg -->
-              <div class="col-lg-4 res-margin">
-                <div class="contact-icon bg-secondary text-light">
-                  <!---icon-->
-                  <i class="fa fa-phone top-icon"></i>
-                  <!-- contact-icon info-->
-                  <div class="contact-icon-info">
-                    <h5>{{collections.contact[0].data.arayin}}</h5>
-                    <p>
-                      <a href="tel:{{sitedata.tel}}">{{sitedata.tel}}</a>
-                    </p>
-                  </div>
-                </div>
-                <!-- /contact-icon-->
-              </div>
-              <!-- /col-lg-->
-            </div>
-            <!-- /row -->
-          </div>
-          <!-- /contact-info-->
-        </div>
-        <!-- /col-lg-->
-        <!--notepad -->
-        <div class="col-lg-12 mt-5 block-padding force notepad pl-5 pr-5">
-          <div class="row">
-            <div class="col-lg-7">
-              <!-- contact-info-->
-              <h4>
-                {{collections.contact[0].data.bizeulasin}}
-              </h4>
-              <!-- Form Starts -->
-              <div id="contact_form">
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <label>{{collections.contact[0].data.form.ad}}
-                        <span class="required">*</span></label>
-                      <input type="text" name="name" class="form-control input-field" required="">
-                    </div>
-                    <div class="col-md-6">
-                      <label>{{collections.contact[0].data.form.mail}}
-                        <span class="required">*</span></label>
-                      <input type="email" name="email" class="form-control input-field" required="">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <label>{{collections.contact[0].data.form.konu}}</label>
-                      <input type="text" name="subject" class="form-control input-field">
-                    </div>
-                    <div class="col-md-12">
-                      <label>{{collections.contact[0].data.form.mesaj}}
-                        <span class="required">*</span></label>
-                      <textarea name="message" id="message" class="textarea-field form-control" rows="3" required=""></textarea>
-                    </div>
-                  </div>
-                  <button type="submit" id="submit_btn" value="Submit" class="btn btn-tertiary">{{collections.contact[0].data.form.buton}}</button>
-                </div>
-                <!-- /form-group-->
-                <!-- Contact results -->
-                <div id="contact_results"></div>
-              </div>
-              <!-- /contact-form-->
-            </div>
-            <!-- /contact-info-->
-            <div class="col-lg-5">
-              <!-- map-->
-              <div id="map-canvas" class="mt-5 rounded"></div>
-            </div>
-            <!-- ornament starts-->
-            <div class="ornament-stars mt-8" data-aos="zoom-out"></div>
-          </div>
-          <!-- /row-->
-        </div>
-        <!-- /col-lg-->
-      </div>
-      <!-- /.row-->
-    </section>
-    <!-- /Section -->
   </div>
-  <!--/ page-wrapper -->
+</section>
+<!-- feature-style-two end -->
+
+<!-- about-style-two -->
+<section class="about-style-two">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+        <div class="image_block_2">
+          <div class="image-box">
+            <figure class="image image-1"><img src="assets/images/resource/about-1.jpg" alt=""></figure>
+            <figure class="image image-2"><img src="assets/images/resource/about-2.jpg" alt=""></figure>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+        <div class="content_block_3">
+          <div class="content-box">
+            <div class="sec-title style-two">
+              <p class="lang" key="hakkimizdaaltbaslik">{{hakkimizda.altbaslik}}</p>
+              <h2 class="lang" key="hakkimizbaslik">{{hakkimizda.baslik}}</h2>
+            </div>
+            <div class="tabs-box">
+              <div class="tab-btn-box">
+                <ul class="tab-btns tab-buttons clearfix">
+                  <li class="tab-btn active-btn" data-tab="#tab-1">
+                    <h5 class="lang" key="firmatarihi">{{hakkimizda.firmatarihi}}</h5>
+                  </li>
+                  <li class="tab-btn" data-tab="#tab-2">
+                    <h5 class="lang" key="hakkimiz">{{hakkimizda.hakkimiz}}</h5>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs-content">
+                <div class="tab active-tab" id="tab-1">
+                  <div class="inner-box">
+                    <div class="inner">
+                      <figure class="image-box"><img src="assets/images/resource/about-3.jpg" alt=""></figure>
+                      <div class="text">
+                        <p class="lang" key="firmatarihikisayazi">{{hakkimizda.firmatarihikisayazi}}</p>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <a href="{{hakkimizda.url | url}}" class="theme-btn-two lang" key="hakkimizdabuton">{{hakkimizda.button}}</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab" id="tab-2">
+                  <div class="inner-box">
+                    <div class="inner">
+                      <figure class="image-box"><img src="assets/images/resource/about-3.jpg" alt=""></figure>
+                      <div class="text">
+                        <p class="lang" key="hakkimizkisayazi">{{hakkimizda.hakkimizkisayazi}}</p>
+                      </div>
+                    </div>
+                    <div class="btn-box">
+                      <a href="{{hakkimizda.url | url}}" class="theme-btn-two lang" key="hakkimizdabuton">{{hakkimizda.button}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about-style-two end -->
+
+<!-- shop-section -->
+<section class="shop-section alternat-2 centred">
+  <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-4.png);"></div>
+  <figure class="image-layer"><img src="assets/images/resource/bee-3.png" alt=""></figure>
+  <div class="auto-container">
+    <div class="sec-title style-two centred">
+      <p class="lang" key="magazaziyaret">{{magazaziyaret}}</p>
+      <h2 class="lang" key="urunlerimiz">{{urunlerimiz}}</h2>
+    </div>
+    <div class="row clearfix">
+      {% set products = collections.Urunler %}
+      {%- for pro in products -%}
+        <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+          <div class="shop-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+            <div class="inner-box">
+              <figure class="image-box">
+                <a href="{{pro.url | url}}"><img src="{{pro.data.image | url}}" alt="{{pro.data.title}}"></a>
+              </figure>
+              <div class="lower-content">
+                <h5 style="margin-top:20px">
+                  <a href="{{pro.url | url}}">{{pro.data.title}}</a>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    <div class="more-btn">
+      <a href="{{collections.urunler[0].url | url}}" class="theme-btn-two lang" key="tumurunler">Tüm Ürünleri Göster</a>
+    </div>
+  </div>
+</section>
+<!-- shop-section end -->
+
+<!-- feature-style-three -->
+<section class="feature-style-three">
+  <div class="auto-container">
+    <div class="row align-items-center clearfix">
+      <div class="col-lg-4 col-md-12 col-sm-12 content-column">
+        <div class="content_block_4">
+          <div class="content-box">
+            <div class="sec-title style-two">
+              <p>Core Features</p>
+              <h2>Making honey is a complex and unique process</h2>
+            </div>
+            <div class="text">
+              <p>Sed ut perspiciatis unde omnis iste natus volup tatem accusantium doloremque laudant totams reperiam, eaque ipsa quae ab illo inventorety veritatis et qrchitecto beatae vitae
+              </p>
+            </div>
+            <ul class="list-item clearfix">
+              <li>One Of Ther Best Honey Providers</li>
+              <li>How To Create A Mobile App In Expoerise</li>
+              <li>Learning Resources Challenging Times</li>
+            </ul>
+            <div class="btn-box">
+              <a href="index-2.html" class="theme-btn-two">visit our shop</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-12 col-sm-12 inner-column">
+        <div class="feature-column">
+          <div class="row clearfix">
+            <div class="col-lg-6 col-md-6 col-sm-12 feature-block">
+              <div class="feature-block-three small-block clearfix wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <i class="flaticon-bee-2"></i>
+                  </div>
+                  <h3>Honeycomb</h3>
+                  <p>Sed perspiciatis unde omnis iste natus error volup</p>
+                </div>
+              </div>
+              <div class="feature-block-three wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <i class="flaticon-bee-3"></i>
+                  </div>
+                  <h3>100% Natural Bees</h3>
+                  <p>But must explain to you how this mistaken idea of denounci pleasure and praising pain was born</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 feature-block">
+              <div class="feature-block-three wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <i class="flaticon-honey"></i>
+                  </div>
+                  <h3>well beekeeping</h3>
+                  <p>Quis autem vel eum iure reprehende qui in ea voluptate velit esse quam nihil molestiae consequatur vel illum</p>
+                </div>
+              </div>
+              <div class="feature-block-three small-block wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                  <div class="icon-box">
+                    <i class="flaticon-honey-1"></i>
+                  </div>
+                  <h3>fresh & orginals</h3>
+                  <p>Nor again is there anyone who loves or pursues or desires</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- feature-style-three end -->
+
+<!-- video-section -->
+<section class="video-section">
+  <div class="auto-container">
+    <div class="video-inner" style="background-image: url(assets/images/background/video-1.jpg);">
+      <div class="video-content">
+        <div class="inner">
+          <div class="count-outer count-box">
+            <span class="count-text" data-speed="1500" data-stop="600">0</span>
+          </div>
+          <h3>Happy Clients</h3>
+        </div>
+      </div>
+      <div class="video-btn">
+        <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image video-btn" data-caption="">
+          <i class="fas fa-play"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- video-section end -->
+
+<!-- working-process -->
+<section class="working-process centred">
+  <div class="auto-container">
+    <div class="sec-title light style-two centred">
+      <p>Working Process</p>
+      <h2>how dose we works</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-4 col-md-6 col-sm-12 process-block">
+        <div class="process-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <span class="count-text">01</span>
+            <div class="icon-box">
+              <i class="flaticon-honey-3"></i>
+            </div>
+            <h3>Choose beekeeping</h3>
+            <p>But I must explain to you how this mistaken idea of denouncing pleasure and praising pain was born</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 process-block">
+        <div class="process-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <span class="count-text">02</span>
+            <div class="icon-box">
+              <i class="flaticon-honey-2"></i>
+            </div>
+            <h3>Selected Bees</h3>
+            <p>But I must explain to you how this mistaken idea of denouncing pleasure and praising pain was born</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 process-block">
+        <div class="process-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <span class="count-text">03</span>
+            <div class="icon-box">
+              <i class="flaticon-honey-4"></i>
+            </div>
+            <h3>got well product</h3>
+            <p>But I must explain to you how this mistaken idea of denouncing pleasure and praising pain was born</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- working-process end -->
+
+<!-- testimonial-section -->
+<section class="testimonial-section alternat-2">
+  <div class="auto-container">
+    <div class="sec-title style-two">
+      <p class="lang" key="sizdengelenler">Sizlerden Gelenler</p>
+      <h2 class="lang" key="nedediler">Ne söylediler?</h2>
+    </div>
+    <div class="testimonial-inner">
+      <div class="single-item-carousel owl-carousel owl-theme">
+        {%- for say in testimonals -%}
+          <div class="testimonial-block-one">
+            <div class="inner-box">
+              <figure class="author-thumb"><img src="assets/images/resource/testimonial-3.png" alt=""></figure>
+              <div class="text">
+                <p><img src="assets/images/icons/arrow-1.png" alt="">{{say.soylenen}}</p>
+              </div>
+              <div class="author-info">
+                <h4>{{say.soyleyen}}</h4>
+                <span class="designation">{{say.meslek}}</span>
+              </div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- testimonial-section end -->
+
+<!-- subscribe-section -->
+<section class="subscribe-section">
+  <div class="outer-container">
+    <div class="subscribe-inner">
+      <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-5.png);"></div>
+      <div class="content-box">
+        <div class="sec-title style-two centred">
+          <p>Get More Updates</p>
+          <h2>subscribe newsletters</h2>
+        </div>
+        <div class="text centred">
+          <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was
+            <br/>born and I will give you a complete account of the system, and expound</p>
+        </div>
+        <form action="index-2.html" method="post" class="subscribe-form">
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Enter Your Emaill Address" required="">
+            <button type="submit" class="theme-btn-two">subscribe now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- subscribe-section end -->
+
+<!-- news-section -->
+<section class="news-section sec-pad">
+  <div class="auto-container">
+    <div class="sec-title">
+      <p>Reads Our Articles</p>
+      <h2>Latest news & blog</h2>
+    </div>
+    <div class="row clearfix">
+      <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+        <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <figure class="image-box">
+              <a href="blog-details.html"><img src="assets/images/news/news-1.jpg" alt=""></a>
+            </figure>
+            <div class="lower-content">
+              <h5>
+                <a href="blog-details.html">Smashing Podcast Episo With Mina Markham How Can I Learn React Which Video Conferencie Tools Are Most Accessibls</a>
+              </h5>
+              <ul class="post-info clearfix">
+                <li>
+                  <i class="far fa-calendar-alt"></i>30 Aug 2020</li>
+                <li>
+                  <i class="far fa-comment"></i>
+                  <a href="index.html">Com (05)</a>
+                </li>
+              </ul>
+              <div class="link">
+                <a href="blog-details.html">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+        <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <figure class="image-box">
+              <a href="blog-details.html"><img src="assets/images/news/news-2.jpg" alt=""></a>
+            </figure>
+            <div class="lower-content">
+              <h5>
+                <a href="blog-details.html">Building A Facial Recognition Web Application With React How Can I Learn React Which Video Tools Are Most Accessibls</a>
+              </h5>
+              <ul class="post-info clearfix">
+                <li>
+                  <i class="far fa-calendar-alt"></i>29 Aug 2020</li>
+                <li>
+                  <i class="far fa-comment"></i>
+                  <a href="index.html">Com (06)</a>
+                </li>
+              </ul>
+              <div class="link">
+                <a href="blog-details.html">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 news-block">
+        <div class="news-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <figure class="image-box">
+              <a href="blog-details.html"><img src="assets/images/news/news-3.jpg" alt=""></a>
+            </figure>
+            <div class="lower-content">
+              <h5>
+                <a href="blog-details.html">Mirage JS Deep Dive Understan ding Timing, Response And Pass rough (Part 3)Can I Learn eact Tools Are Most Accessibls</a>
+              </h5>
+              <ul class="post-info clearfix">
+                <li>
+                  <i class="far fa-calendar-alt"></i>28 Aug 2020</li>
+                <li>
+                  <i class="far fa-comment"></i>
+                  <a href="index.html">Com (02)</a>
+                </li>
+              </ul>
+              <div class="link">
+                <a href="blog-details.html">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- news-section end -->
+
+<!-- clients-section -->
+<section class="clients-section alternat-2">
+  <div class="auto-container">
+    <div class="auto-container">
+      <div class="clients-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
+        <figure class="clients-logo-box">
+          <a href="index.html"><img src="assets/images/clients/clients-logo-1.png" alt=""></a>
+        </figure>
+        <figure class="clients-logo-box">
+          <a href="index.html"><img src="assets/images/clients/clients-logo-2.png" alt=""></a>
+        </figure>
+        <figure class="clients-logo-box">
+          <a href="index.html"><img src="assets/images/clients/clients-logo-3.png" alt=""></a>
+        </figure>
+        <figure class="clients-logo-box">
+          <a href="index.html"><img src="assets/images/clients/clients-logo-4.png" alt=""></a>
+        </figure>
+        <figure class="clients-logo-box">
+          <a href="index.html"><img src="assets/images/clients/clients-logo-5.png" alt=""></a>
+        </figure>
+        <figure class="clients-logo-box">
+          <a href="index.html"><img src="assets/images/clients/clients-logo-6.png" alt=""></a>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- clients-section end -->

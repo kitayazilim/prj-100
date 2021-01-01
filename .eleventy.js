@@ -64,17 +64,7 @@ module.exports = function (eleventyConfig) {
     return [...tagSet];
   });
 
-  eleventyConfig.addPassthroughCopy("img");
-  eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("vendor");
-  eleventyConfig.addPassthroughCopy("fonts");
-  eleventyConfig.addPassthroughCopy("styles");
-  eleventyConfig.addPassthroughCopy("js");
-  eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("js");
-  eleventyConfig.addPassthroughCopy("apple-icon-57x57.png");
-  eleventyConfig.addPassthroughCopy("apple-icon-72x72.png");
-  eleventyConfig.addPassthroughCopy("apple-icon-114x114.png");
+  eleventyConfig.addPassthroughCopy("assets");
 
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
